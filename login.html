@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="email" id="loginId" name="loginId" autofocus placeholder="아이디">
+    <input type="password" id="loginPw" name="password" placeholder="비밀번호">
+    <input type="button" value="로그인" onclick="f_login()" class="btn_login"></input>
+    <script>
+        // 로컬스토리지 사용하기!!
+        var id = document.getElementById("loginId");
+        var pass = document.getElementById("loginPw");
+        var v_arr = [];
+        function f_login() {
+            var v_json = {};
+            v_json.id = id.value;
+            v_json.pw = pass.value;
+            v_arr.push(v_json);
+            localStorage.setItem("login", JSON.stringify(v_arr));
+        }
+
+        var memTableName = "회원가입";
+        var v_form = document.getElementById("myForm");
+        var v_id = document.getElementById("loginId");
+        var v_pass = document.getElementById("loginPw");
+        
+        function f_login() {
+             var v_member  =  JSON.parse(localStorage.getItem(memTableName));
+             console.log(v_member)
+             //로그인 체크
+             for(var i = 0; i < v_member.length; i++) {
+                     if(v_member[i].id == v_id.value && v_member[i].password == v_pass.value) {
+                             v_member[i].login = true;
+                             localStorage.setItem(memTableName,JSON.stringify(v_member)); 
+                             alert("로그인 되었습니다.");
+                             location.href="shoppingmall.html?memId=" + v_id.value;
+                             return;
+                     } 
+             }
+             alert("로그인이 되지 않았습니다.");
+        }
+    </script>
+</body>
+
+</html>

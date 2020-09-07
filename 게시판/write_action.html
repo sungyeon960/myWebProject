@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<script src="jsp.js"></script>
+<title>게시판</title>
+<script>
+    var v_title = request.getParameter("nm_title");
+    var v_writer = request.getParameter("nm_writer");
+    var v_auth = request.getParameter("nm_auth");
+    var v_star = request.getParameter("nm_star");
+    var v_content = request.getParameter("nm_content");
+    v_title = v_title.replace(/\+/g, " ");
+    v_writer = v_writer.replace(/\+/g, " ");
+    v_content = v_content.replace(/\+/g, " ");
+
+    var v_tblName = "문의게시판";  
+
+    var v_record = {};  
+    v_record.title = v_title;
+    v_record.writer = v_writer;
+    v_record.auth = v_auth;
+    v_record.star = v_star;
+    v_record.content = v_content;
+
+    if (!localStorage.getItem(v_tblName)) {
+        var v_arrData = [];
+        v_record.num = 1; 
+        v_arrData.push(v_record);
+        localStorage.setItem(v_tblName, JSON.stringify(v_arrData));
+    } else {
+        var v_arrData = JSON.parse(localStorage.getItem(v_tblName));
+        v_record.num = v_arrData[v_arrData.length - 1].num + 1;
+        v_arrData.push(v_record);
+        localStorage.setItem(v_tblName, JSON.stringify(v_arrData));
+    }
+    location.href = "게시판.html";
+</script>

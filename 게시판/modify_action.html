@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<script src="./jsp.js"></script>
+<title>게시판</title>
+<script>
+    var v_gNum = request.getParameter("nm_num");
+    var v_star= request.getParameterValues("nm_star");
+    var v_content = request.getParameter("nm_content");
+    v_content = v_content.replace("/\+/gi", " ");
+
+    var v_tblName="문의게시판";
+
+    var v_record = {};
+    v_record.star = v_star;
+    v_record.content = v_content;
+
+    var v_arrData = JSON.parse(localStorage.getItem(v_tblName));
+    for(var i=0; i<v_arrData.length; i++){
+        if(v_arrData[i].num == v_gNum){
+            v_arrData[i].star = v_record.star;
+            v_arrData[i].content = v_record.content;
+        }
+    }
+
+    localStorage.setItem(v_tblName,JSON.stringify(v_arrData));
+
+    location.href ="게시판.html";
+</script>

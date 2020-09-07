@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main2.css">
+    <style>
+        .container {
+            margin-top: 20px;
+            background-color: white;
+            width: 800px;
+            height: 650px;
+            border-radius: 10%;
+        }
+
+        input.ng-invalid {
+            border: 5px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <a href="이벤트.html" class="menu">EVENT</a>
+        <a href="동화선택.html" class="menu">DIY</a>
+        <a href="메인화면.html" class="menu">HOME</a>
+    </div>
+
+    <br><br><br><br>
+    <div id="middle">
+        <h2 id="id_main">월간동화책</h2>
+    </div>
+    <div class="container" id="wrap">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <form action="메인화면.html">
+                    <br><br>
+                    <legend>회원가입</legend>
+                    <div class="row">
+                        <div class="col-xs-6 col-md-6">
+                            <input type="text" id="id" class="form-control input-lg" ng-model="user.firstName"
+                                placeholder="아이디" ng-required="true" ng-maxlength="4" value="id" />
+                        </div>
+                        <div class="col-xs-6 col-md-6">
+                            <input type="text" id="name" class="form-control input-lg" placeholder="이름"
+                                ng-model="user.lastName" ng-required="true" ng-minlength="2" value="박성연" />
+                        </div>
+                        <br><br>
+                        <br><br>
+                        <!-- <h5 class="alert alert-warning">성은 최대 4글자만 입력가능합니다.</h5>
+                        <h5 class="alert alert-warning">이름은 최소 2글자만 입력가능합니다.</h5> -->
+                    </div>
+                    <input type="text" id="email" class="form-control input-lg" placeholder="Email"
+                        ng-model="user.email" ng-required="true" value="psy@naver.com" />
+                    <br><br>
+                    <br><br>
+                    <input type="password" id="password" class="form-control input-lg" placeholder="패스워드"
+                        ng-model="user.password" ng-required="true" value="1234" />
+                    <!--  <h5 class="alert alert-warning">
+                        최소 4글자, 최대 8글자이고 적어도 하나의 소문자, 대문자, 숫자를 포함해야합니다.</h5> -->
+
+                    <br><br>
+                    <br><br>
+                    <input type="password" id="confirm_password" class="form-control input-lg" placeholder="패스워드 재입력"
+                        ng-model="user.repassword" ng-required="true" value="1234" />
+
+                    <br><br>
+                    <br><br>
+                    <table>
+                        <tr>
+                            <td>
+                                <button style="width: 180px;" class="btn btn-lg btn-primary btn-block signup-btn"
+                                    type="button" onclick="f_memReg()">회원가입</button>
+                            </td>
+                            <td>
+                                <button style="width: 180px;" class="btn btn-lg btn-primary btn-block signup-btn"
+                                    type="reset">후원하기 <img width="40px" src="img/pay.png"></button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var v_memTable = [];    //멤버 담을 배열
+        var memTableName = "회원가입"
+        function f_memReg() {
+            //이미 배열이 들어있다면, 기존에 데이타가 있다면 
+            if (JSON.parse(localStorage.getItem(memTableName))) {
+                v_memTable = JSON.parse(localStorage.getItem(memTableName));
+            };
+            var v_member = {};  //객체 생성
+            v_member.id = document.getElementById("id").value;  //아이디
+            v_member.lastname = document.getElementById("name").value;  //이름
+            // v_member.mem_passConfirm = document.getElementById("mem_passConfirm").value;    //비밀번호 확인
+            v_member.email = document.getElementById("email").value;  // 이메일
+            v_member.password = document.getElementById("password").value;    //비밀번호
+            v_member.confirm_password = document.getElementById("confirm_password").value;    //비밀번호확인
+            v_member.login = false; //로그인 여부 체크
+            v_memTable.push(v_member);
+            localStorage.setItem(memTableName, JSON.stringify(v_memTable)); //로컬에 저장
+            location.href = "메인화면.html";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="regbar">
+      <div id="navthing">
+        <h2><a href="#" id="loginform">Login</a> | <a href="#">Register</a></h2>
+        <div class="login">
+          <div class="arrow-up"></div>
+          <div class="formholder">
+            <div class="randompad">
+              <fieldset>
+                <label name="email">Email</label>
+                <input type="email" value="example@example.com" />
+                <label name="password">Password</label>
+                <input type="password" />
+                <input type="submit" value="Login" />
+                <input type="submit" value="Login" />
+
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $('input[type="submit"]').mousedown(function () {
+      $(this).css('background', '#2ecc71');
+    });
+    $('input[type="submit"]').mouseup(function () {
+      $(this).css('background', '#1abc9c');
+    });
+
+    $('#loginform').click(function () {
+      $('.login').fadeToggle('slow');
+      $(this).toggleClass('green');
+    });
+
+
+
+    $(document).mouseup(function (e) {
+      var container = $(".login");
+
+      if (!container.is(e.target) // if the target of the click isn't the container...
+        && container.has(e.target).length === 0) // ... nor a descendant of the container
+      {
+        container.hide();
+        $('#loginform').removeClass('green');
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bookselect.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .font{
+            font-family: "아이스크림", serif;
+        }
+        @font-face {
+            font-family: 'Bazzi';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/Bazzi.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Binggrae-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae-Bold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            background-color: rgba(218, 195, 68, 0.692);
+        }
+
+        #id_mainFair {
+            font-size: 30px;
+            font-weight: bold;
+            color: rgb(114, 236, 58);
+            display: inline-block;
+        }
+
+        #id_child {
+            position: relative;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        #id_childtxt {
+            position: absolute;
+            font-size: 60px;
+            top: 20%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            text-shadow: -1px 0 1px black, 0 1px 1px black,
+                1px 0 1px black, 0 -1px 1px black;
+            position: absolute;
+            font-family: "Bazzi", serif;
+            color: rgb(255, 230, 0);
+        }
+
+        #id_childtxt2 {
+            position: absolute;
+            font-size: 30px;
+            top: 35%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            color: black;
+            font-family: "Binggrae-Bold", serif;
+        }
+
+        #id_childimg {
+            width: 100%;
+        }
+
+        .cl_menu {
+            /* 월간동화책 */
+            color: white;
+            text-shadow: 2px 2px 2px gray;
+            text-decoration: none;
+            font-weight: bold;
+            height: 50px;
+            font-size: 50px;
+            position: relative;
+            left: 3%;
+        }
+
+        #id_maindiv {
+            text-align: left;
+            line-height: 50px;
+        }
+
+        .cl_menu:hover {
+            color: rgb(114, 236, 58);
+        }
+
+        #id_endwrapper {
+            text-align: center;
+        }
+        #id_where td{
+            border-bottom: 1px solid black;
+            height: 50px;
+        }
+        #weather{
+            text-align: center;
+            background-color: rgba(60, 160, 243, 0.63);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="top">
+        <br>
+        <a href="이벤트.html" class="menu">EVENT</a>
+        <a href="동화선택.html" class="menu">DIY</a>
+        <a href="메인화면.html" class="menu">HOME</a>
+        <a href="#" class="menu">Logout</a>
+        <br>
+    </div>
+    <div id="id_maindiv">
+        <a href="메인화면.html" class="cl_menu">월간동화</a>
+    </div>
+
+
+    <div id="id_child"><br>
+        <img src="img/child.png" height="700px" id="id_childimg">
+        <h2 id="id_childtxt">동심을 지키는 기술을 연구합니다.</h2>
+        <h3 id="id_childtxt2">월간동화는 당신의 자녀의 동심을 지켜주고 <br>삶을 더 깊이 이해하는 기술을 만들어갑니다.</h3>
+    </div>
+    <!-- * 카카오맵 - 지도퍼가기 -->
+    <!-- 1. 지도 노드 -->
+    <div style="background-color: white; font-size: 25px;">
+        <br><br>
+        <div id="weather">
+            <br>
+            <h2 class="font" style="color: rgb(255, 255, 255);">오늘 우리 회사는?</h2>
+            <div>
+                <div class="font" style="color: white;" id="chatLog" class="chat_log" readonly>
+                </div>
+              </div>
+             <img src="" id="img" style="width: 200px;"></img>
+           </div>
+        <table>
+            <tr>
+                <td>
+                    <div style=" position: relative; left: 50px; display: inline-block; width: 200px; height: 10px;">
+                        <h2>회사 오는 길</h2>
+                        <br>
+                    </div>
+                </td>
+                <td>
+                    <div style=" position: relative; left: 200px; display: inline-block; width: 200px; height: 10px;">
+                        <h2>회사 오는 방법</h2>
+                        <br>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="left: 50px;" id="daumRoughmapContainer1597374915244"
+                        class="root_daum_roughmap root_daum_roughmap_landing"></div>
+                    <br><br><br>
+                </td>
+                <td>
+                    <div style=" position: relative; top: -230px; left: 200px; display: inline-block; width: 200px; height: 10px;">
+                        <table id="id_where" style="width: 500px;">
+                            <tr>
+                                <th style="width: 20%;">
+                                    열차편
+                                </th>
+                                <th style="width: 40%;">
+                                    서울역<->대전역
+                                </th>
+                                <th style="width: 40%;">
+                                    부산역<->대전역
+                                </th>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td>
+                                    KTX
+                                </td>
+                                <td>
+                                    50분
+                                </td>
+                                <td>
+                                    2시간
+                                </td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td>새마을</td>
+                                <td>1시간 40분</td>
+                                <td>3시간</td>
+                            </tr>
+                            <tr style="text-align: center;">
+                                <td>무궁화</td>
+                                <td>2시간</td>
+                                <td>3시간 40분</td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    <br>
+    <div id="id_endwrapper">&emsp;
+        <h2 class="end" onclick="location.href = '회사소개.html'">회사소개</h2>&emsp;
+        <h2 class="end">인재채용</h2>&emsp;
+        <h2 class="end" onclick="location.href = '제휴제안.html'">제휴제안</h2>&emsp;
+        <h2 class="end">이용약관</h2>&emsp;
+        <h2 class="end">월간동화정책</h2>&emsp;
+        <h2 class="end" onclick="location.href = '고객센터.html'">고객센터</h2>&emsp;&emsp;&emsp;&emsp;
+        <h2 class="end" onclick="location.href = 'sky.html'">@PSY Corp.</h2>
+        <div id="alr">본 콘텐츠의 저작권은 제공처에 있으며, 이를 무단 이용하는 경우 저작권법 등에 따라 법적책임을 질 수 있습니다.<br>
+            Copyright © PSY Corp. All Rights Reserved.<br><br></div>
+    </div>
+    <!--
+	2. 설치 스크립트
+	* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+-->
+    <script charset="UTF-8" class="daum_roughmap_loader_script"
+        src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+    <!-- 3. 실행 스크립트 -->
+    <script charset="UTF-8">
+        new daum.roughmap.Lander({
+            "timestamp": "1597374915244",
+            "key": "2znva",
+            "mapWidth": "640",
+            "mapHeight": "360"
+        }).render();
+
+
+        var apiURI ="http://api.openweathermap.org/data/2.5/weather?q=Daejeon&appid=9383102db6339f3c7c18643e54e52d0a";
+          $.ajax({
+            url : apiURI,
+            method : 'GET',
+            success :  (data)=> {
+              var temp = String((data.main.temp - 272)).substring(0,3); // 온도
+              var location = data.name; // 지역이름 
+              $('#chatLog').append('회사는? ' + location + ' <br>오늘의 날씨는? ' + temp　+ "0°C "+'\n');
+ // 아이콘 취득 
+              var imgURL = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
+              // 아이콘 표시
+              $('#img').attr("src", imgURL);
+            }
+          });
+    </script>
+</body>
+
+</html>
+</body>
+
+</html>

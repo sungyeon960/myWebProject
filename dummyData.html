@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<script>
+  localStorage.clear();   // 일단 localStorage 지우기
+  var v_dataMax = 108;  // 108번뇌
+  var v_dataArr = [];   // json을 담을 빈 배열
+  for (var i = 0; i < v_dataMax; i++) {
+    var v_gul = {};             // 게시글 묶음을 위한 빈 객체
+    v_gul.num = (i + 1);
+    v_gul.title = "제목" + (i + 1);
+    v_gul.writer = "글쓴이" + (i + 1);
+    v_gul.content = "내용이야" + (i + 1);
+    v_gul.auth = "manager";
+
+    var v_dataStar = ["★★★★★", "☆★★★★", "☆☆★★★", "☆☆☆★★", "☆☆☆☆★", "☆☆☆☆☆"];  // 랜덤하게 1~4개까지 들어가게
+    var v_selSkill = []; // 랜덤값 담을 배열
+    var v_ranCnt = Math.floor(Math.random() * 5) + 1;
+    v_selSkill.push(v_dataStar[v_ranCnt]);
+    console.log(v_selSkill, v_dataStar);
+    v_gul.star = v_selSkill;
+
+
+    v_dataArr.push(v_gul);
+  }
+  localStorage.setItem("문의게시판", JSON.stringify(v_dataArr));
+</script>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>메인화면</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main2.css">
+</head>
+
+<body>
+
+    <div>
+        <a href="이벤트.html" class="menu">EVENT</a>
+        <a href="동화선택.html" class="menu">DIY</a>
+        <a href="메인화면.html" class="menu">HOME</a>
+        <div id="wrap">
+            <div id="regbar">
+                <div id="navthing">
+                    <h2 id="id_h2"><a href="#" id="loginform" class="menu"><input class="menu" type="text"
+                                style="position: relative; top: -15px; font-size: 25px; background-color: rgba(0, 0, 0, 0);"
+                                id="loginform2" value="Logout"></a> </h2>
+                    <div class="login">
+                        <div class="arrow-up"></div>
+                        <div class="formholder">
+                            <div class="randompad">
+                                <fieldset>
+                                    <label name="id">
+                                        <h4>&nbsp;&nbsp;아이디</h4>
+                                    </label>
+                                    <input type="text" id="loginId" style=" padding: 7px 5px;
+                                    margin: 10px 0;
+                                    width: 96%;
+                                    display: block;
+                                    font-size: 18px;
+                                    border-radius: 5px;
+                                    border: none;
+                                
+                                    -webkit-transition: 0.3s linear;
+                                    -moz-transition: 0.3s linear;
+                                    -o-transition: 0.3s linear;
+                                    transition: 0.3s linear;" />
+                                    <label name="pass">
+                                        <h4>&nbsp;&nbsp;비밀번호</h4>
+                                    </label>
+                                    <input id="loginPw" type="pass" />
+                                    <input style="background: #1abc9c;
+                                    padding: 10px;
+                                    font-size: 20px;
+                                    display: block;
+                                    width: 100%;
+                                    border: none;
+                                    color: #fff;
+                                    border-radius: 5px;" type="button" value="Login" onclick="f_login()" /></h4>
+                                    <div style="text-align: center;">
+                                        <h4><a href="회원가입.html">회원가입</a></h4>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br>
+        <div id="middle">
+            <div id="id_home">homepage</div>
+            <div id="id_main">월간동화책</div>
+            <div id="go_wrapper">
+                <a href="동화선택.html" id="id_go">동화보러가기</a>
+            </div>
+        </div>
+        <div id="bottom">
+            <img id="id_img" src="img/main.png">
+        </div>
+        <script>
+            $('input[type="submit"]').mousedown(function () {
+                $(this).css('background', '#2ecc71');
+            });
+            $('input[type="submit"]').mouseup(function () {
+                $(this).css('background', '#1abc9c');
+            });
+            $('input[type="button"]').mousedown(function () {
+                $(this).css('background', '#2ecc71');
+            });
+            $('input[type="button"]').mouseup(function () {
+                $(this).css('background', '#1abc9c');
+            });
+            $('#loginform').click(function () {
+                $('.login').fadeToggle('slow');
+                $(this).toggleClass('green');
+            });
+
+
+
+            $(document).mouseup(function (e) {
+                var container = $(".login");
+
+                if (!container.is(e.target) // if the target of the click isn't the container...
+                    && container.has(e.target).length === 0) // ... nor a descendant of the container
+                {
+                    container.hide();
+                    $('#loginform').removeClass('green');
+                }
+            });
+
+
+            var memTableName = "회원가입";
+            var v_form = document.getElementById("myForm");
+            var v_id = document.getElementById("loginId");
+            var v_pass = document.getElementById("loginPw");
+            var v_id_h2 = document.getElementById("id_h2");
+            var v_fo = document.getElementById("loginform2");
+            var flag = true;
+
+
+            function f_login() {
+                if (!flag) {
+                    var v_member = JSON.parse(localStorage.getItem(memTableName));
+                    //로그인 체크
+                    for (var i = 0; i < v_member.length; i++) {
+                        console.log(v_member[i].id)
+                        console.log(v_member[i].password)
+                        console.log(v_id.value)
+                        console.log(v_pass.value)
+                        console.log(v_id_h2.value)
+                        if (v_member[i].id == v_id.value && v_member[i].password == v_pass.value) {
+                            v_member[i].login = true;
+                            localStorage.setItem(memTableName, JSON.stringify(v_member));
+                            // loginform2.value = "Logout"
+                            alert("환영합니다.");
+                            location.href = "메인화면.html?memId=" + v_id.value;
+                            return;
+                        }
+                        alert("아이디 또는 비밀번호를 확인해주십시오.");
+                    }
+                    flag = true;
+                }
+                else {
+                    flag = false;
+                }
+            }
+        </script>
+</body>
+
+</html>

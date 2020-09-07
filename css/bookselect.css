@@ -1,0 +1,175 @@
+#wrapper{
+    background-color: rgba(218, 195, 68, 0.692);
+}
+body{
+    background-color: white;
+}
+#id_imgWrapper{
+    position: relative;
+    text-align: center;
+}
+.img{
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    border-radius: 50%;
+}
+.menu{
+    /* home diy event */
+    color: white;
+    float: right;
+    font-size: 20px;
+    width: 100px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(128, 128, 128, 0.603);
+    text-decoration: none;
+}
+.menu:hover{
+    color: #1abc9c;
+}
+#id_home{
+    /* homepage */
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+#id_main{
+    /* 월간동화책 */
+    color: rgb(114, 236, 58);
+    text-align: center;
+    font-weight: bold;
+    height: 200px;
+    font-size: 100px;
+    font-family: "퀸", serif;
+}
+
+#middle{
+    align-content: center;
+    text-shadow: 2px 2px 2px gray;
+}
+
+#go_wrapper{
+    /* 제작하러가기 전체 */
+    margin:  auto;
+   border:2px solid white;
+    text-shadow: 1px 1px 1px gray;
+   width: 300px;
+   font-weight: bold;
+   height: 50px;
+   line-height: 50px;
+   text-align: center;
+}
+#id_go{
+    /* 제작하러가기 a태그 */
+   color: white;
+   margin: auto auto;
+   font-size: 25px;
+   /* 밑줄 없애기 */
+   text-decoration: none;
+}
+#bottom{
+    margin: auto;
+    width: 600px;
+}
+#id_img{
+    width: 600px;
+}
+#endwrapper {
+    background-color: rgba(218, 195, 68, 0.692);
+    text-align: center;
+}
+#eventwrapper {
+    text-align: center;
+}
+
+.end{
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 100;
+    color: rgb(7, 6, 6);
+}
+.end:hover{
+    text-decoration: underline; 
+}
+#id_iframe{
+    margin: 0 auto;
+    text-align: center;
+}
+
+#alr{
+    font-size: 11px;
+}
+.btn {
+    width: 200px;
+    font-size: large;
+}
+
+#id_search {
+    background-color: rgba(255, 255, 255, 0);
+    width: 300px;
+    height: 30px;
+}
+
+img {
+    width: 30px;
+    line-height: 50px;
+}
+
+#divs {
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+}
+
+table {
+    position: relative;
+    text-align: center;
+}
+
+#tbl {
+    text-align: center;
+}
+
+#id_div {
+    text-align: center;
+    height: 500px;
+}
+
+#id_main {
+    font-family: "퀸", serif;
+    text-align: center;
+}
+
+#id_num {
+    font-family: "퀸", serif;
+    text-align: center;
+    font-size: 20px;
+}
+
+tr {
+    font-family: "퀸", serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+td {
+    font-family: "퀸", serif;
+    font-size: 20px;
+
+}
+
+
+th {
+    background-color: rgba(224, 206, 41, 0.76);
+    width: 200px;
+    height: 50px;
+}
+
+#id_img {
+    position: absolute;
+    top: 400px;
+    left: 1200px;
+}

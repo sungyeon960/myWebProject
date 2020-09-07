@@ -1,0 +1,89 @@
+fieldset {
+    position: absolute;
+    border-radius: 10%;
+    border: none;
+    background-color: #ECF0F1;
+    top: 80px;
+    left: 300%;
+    width: 400px;
+}
+
+.login {
+    position: relative;
+    width: 350px;
+    display: none;
+    left: 400px;
+}
+
+.formholder {
+    width: 350px;
+    border-radius: 5px;
+    padding-top: 5px;
+}
+
+input[type="text"],
+input[type="pass"] {
+    padding: 7px 5px;
+    margin: 10px 0;
+    width: 96%;
+    display: block;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+
+    -webkit-transition: 0.3s linear;
+    -moz-transition: 0.3s linear;
+    -o-transition: 0.3s linear;
+    transition: 0.3s linear;
+}
+
+#wrap {
+    margin: 0 auto 30px;
+
+}
+
+
+#navthing {
+    margin-left: 50px;
+}
+
+.arrow-up {
+}
+
+input[type="submit"] {
+    background: #1abc9c;
+    padding: 10px;
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+}
+input[type="button"] {
+    background: #1abc9c;
+    padding: 10px;
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.randompad {
+    padding: 10px;
+}
+
+.green {
+    color: #1abc9c;
+}
+
+#loginform:hover {
+    color: #1abc9c;
+}
+
+#loginform {
+    color: #ecf0f1;
+    text-decoration: none;
+}

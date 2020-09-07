@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+    <link rel="stylesheet" href="../css/bookselect.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <title>게시판</title>
+    <style>
+        #id_main {
+            font-family: "퀸", serif;
+            text-align: center;
+        }
+
+        th, td {
+            border-bottom: 1px solid rgba(114, 111, 111, 0.356);
+        }
+
+        th {
+            background-color: rgba(218, 196, 68, 0.479);
+            width: 300px;
+        }
+
+        #id_img {
+            position: absolute;
+            top: 400px;
+            left: 1200px;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="id_img" src="../img/child11.png">
+    <div style="background-color: rgba(218, 195, 68, 0.692);">
+        <div>
+            <a href="../이벤트.html" class="menu">EVENT</a>
+            <a href="../동화선택.html" class="menu">DIY</a>
+            <a href="../메인화면.html" class="menu">HOME</a>
+            <a href="#" class="menu">Logout</a>
+        </div>
+        <br>
+        <div id="middle">
+            <h2 id="id_main">게시판</h2>
+        </div>
+    </div>
+    <form action="write_action.html">
+        <table>
+            <tr>
+                <th>제목</th>
+                <td class="tbd"><input style="width:500px; border-bottom: 1px solid black; height: 50px; border: rgb(0,0,0,1);" type=text
+                        name="nm_title" value=""></td>
+            </tr>
+            <tr>
+                <th>글쓴이</th>
+                <td class="tbd"><input style="width:500px; height: 50px; border: rgb(0,0,0,1);" type=text
+                        name="nm_writer" value=""></td>
+            </tr>
+            <tr>
+                <th>권한</th>
+                <td class="tbd"><select style="background-color: white; width:500px; height: 50px; border: rgb(0,0,0,1);" name="nm_auth">
+                        <option value="manager">관리자</option>
+                        <option value="member" selected>일반사용자</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <th>후기</th>
+                <td class="tbd"><select style="width:500px; height: 50px; border: rgb(0,0,0,1); background-color: white" name="nm_star">
+                        <option value="★★★★★" selected>★★★★★</option>
+                        <option value="☆★★★★">☆★★★★</option>
+                        <option value="☆☆★★★">☆☆★★★</option>
+                        <option value="☆☆☆★★">☆☆☆★★</option>
+                        <option value="☆☆☆☆★">☆☆☆☆★</option>
+                        <option value="☆☆☆☆☆">☆☆☆☆☆</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <th colspan="2">내용</th>
+            </tr>
+            <tr>
+                <td class="tbd" colspan="2"><textarea style="font-size: 25px; width:100%; height: 100px; border: rgb(0,0,0,1);"
+                        name="nm_content" cols=20 rows=10></textarea></td>
+            </tr>
+            <tr>
+                <td><input id="id_text" type=submit style="width:100%; height: 50px;background-color: white; border: rgb(0,0,0,1);" value="글등록"></td>
+                <td class="tbd"><input type=reset style="width:100%; height: 50px; background-color: white; border: rgb(0,0,0,1);" value="다시쓰기"></td>
+            </tr>
+        </table>
+    </form>
+    <br><br>
+    <div id="endwrapper">&emsp;
+        <h2 class="end" onclick="location.href = '../회사소개.html'">회사소개</h2>&emsp;
+        <h2 class="end">인재채용</h2>&emsp;
+        <h2 class="end" onclick="location.href = '../제휴제안.html'">제휴제안</h2>&emsp;
+        <h2 class="end">이용약관</h2>&emsp;
+        <h2 class="end">월간동화정책</h2>&emsp;
+        <h2 class="end" onclick="location.href = '../고객센터.html'">고객센터</h2>&emsp;&emsp;&emsp;&emsp;
+        <h2 class="end" onclick="location.href = '../sky.html'">@PSY Corp.</h2>
+        <div id="alr">본 콘텐츠의 저작권은 제공처에 있으며, 이를 무단 이용하는 경우 저작권법 등에 따라 법적책임을 질 수 있습니다.<br>
+            Copyright © PSY Corp. All Rights Reserved.<br><br></div>
+    </div>
+</body>
+
+</html>

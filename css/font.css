@@ -1,0 +1,115 @@
+    @font-face {
+        font-family: '에코';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+
+    .nanumpenscript * {
+     font-family: '나눔', cursive;
+    }
+
+    @font-face {
+        font-family: '아이스크림';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: '퀸';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeQUEENJ.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+                      
+    @font-face {
+        font-family: '뉴욕';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/777Newyorkers.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+                
+    @font-face {
+        font-family: '고흥';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/행복고흥L.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+                      
+    @font-face {
+        font-family: '빛';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Shiningstar.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+                
+    @font-face {
+        font-family: '타닥';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/TDTDTadakTadak.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+                
+    @font-face {
+        font-family: '어비';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeMiMi.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+                          
+    @font-face {
+        font-family: '더페';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+                
+    @font-face {
+        font-family: '교보';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: '숑숑';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Syongsyong.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+                
+    @font-face {
+        font-family: '쿠키런';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/CookieRunOTF-Bold00.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: '배민';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BMEULJIRO.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: '정선';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/JSDongkang-RegularA1.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: '배찌';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/Bazzi.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face { 
+        font-family:'페이북'; 
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Bold.woff') format('woff'); 
+        font-weight: normal; 
+        font-style: normal; 
+    }

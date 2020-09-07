@@ -1,0 +1,57 @@
+#id_gan {
+    background-color: white;
+    width: auto;
+    height: 50px;
+}
+
+#sky {
+    position: relative;
+    height: 520px;
+    overflow: hidden;
+}
+
+#sky1 {
+    z-index: 1;
+    position: absolute;
+    background-color: black;
+    height: 520px;
+    width: 100%;
+}
+
+#sky2 {
+    position: absolute;
+    background-color: rgba(33, 207, 230, 0.911);
+    height: 520px;
+    width: 100%;
+}
+
+#id_dal {
+    z-index: 1;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+
+#moon {
+    position: absolute;
+    top: 70px;
+    left: 50px;
+    color: white;
+}
+
+#id_sun {
+    z-index: 1;
+    position: absolute;
+    top: 600px;
+    left: 50px;
+}
+
+.san {
+    z-index: 1;
+    position: absolute;
+    top: 410px;
+}
+
+#id_san {
+    z-index: 1;
+}

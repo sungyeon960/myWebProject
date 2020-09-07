@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bookselect.css">
+    <style>
+        #id_wrap {
+            position: relative;
+            display: inline-block;
+            border-radius: 50%;
+        }
+
+        #id_pigtxt {
+            color: red;
+            position: absolute;
+            font-size: 30px;
+            text-shadow: -1px 0 1px red,
+                0 1px 1px red,
+                1px 0 1px red,
+                0 -1px 1px red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="top">
+            <a href="이벤트.html" class="menu">EVENT</a>
+            <a href="동화선택.html" class="menu">DIY</a>
+            <a href="메인화면.html" class="menu">HOME</a>
+            <a href="#" class="menu">Logout</a>
+        </div>
+        <br><br><br><br>
+        <div id="middle">
+            <div id="id_home">homepage</div>
+            <div id="id_main">월간동화책</div>
+        </div>
+    </div>
+    <br><br><br><br>
+    <div id="id_imgWrapper">
+        &emsp;&emsp;&emsp;&emsp;
+        <div id="id_wrap">
+            <img class="img" id="id_pig" src="img/pig.jpeg">
+            <div id="id_pigtxt"></div>
+        </div>
+        &emsp;&emsp;&emsp;&emsp;
+        <img class="img" id="id_redhat" src="img/redhat.jpeg">
+        <!-- <div id="id_pigtxt">빨간모자</div> -->
+        &emsp;&emsp;&emsp;&emsp;
+        <img class="img" id="id_lala" src="img/lala.jpeg">
+        <!-- <div id="id_pigtxt">라푼젤</div> -->
+        &emsp;&emsp;&emsp;&emsp;
+        <img class="img" id="id_goose" src="img/goose.jpeg">
+        <!-- <div id="id_pigtxt">황금알을낳는거위</div> -->
+    </div>
+    <br><br><br><br><br>
+    <div id="endwrapper">&emsp;
+        <h2 class="end" onclick="location.href = '회사소개.html'">회사소개</h2>&emsp;
+        <h2 class="end">인재채용</h2>&emsp;
+        <h2 class="end" onclick="location.href = '제휴제안.html'">제휴제안</h2>&emsp;
+        <h2 class="end">이용약관</h2>&emsp;
+        <h2 class="end">월간동화정책</h2>&emsp;
+        <h2 class="end" onclick="location.href = '고객센터.html'">고객센터</h2>&emsp;&emsp;&emsp;&emsp;
+        <h2 class="end" onclick="location.href = 'sky.html'">@PSY Corp.</h2>
+        <div id="alr">본 콘텐츠의 저작권은 제공처에 있으며, 이를 무단 이용하는 경우 저작권법 등에 따라 법적책임을 질 수 있습니다.<br>
+            Copyright © PSY Corp. All Rights Reserved.<br><br></div>
+    </div>
+    <script>
+        var v_pig = document.getElementById("id_pig");
+        var v_redhat = document.getElementById("id_redhat");
+        var v_lala = document.getElementById("id_lala");
+        var v_goose = document.getElementById("id_goose");
+        var v_one = document.getElementById("one");
+
+        var v_pigtxt = document.getElementById("id_pigtxt");
+
+        v_pig.style.top = "0px";
+        v_pig.style.left = "0px";
+        v_redhat.style.top = "0px";
+        v_redhat.style.left = "0px";
+        v_lala.style.top = "0px";
+        v_lala.style.left = "0px";
+        v_goose.style.top = "0px";
+        v_goose.style.left = "0px";
+        v_pigtxt.style.top = v_pig.style.top;
+        9+8
+        v_pig.onmouseenter = function () {
+            v_pig.style.opacity = "0.5";
+            v_pigtxt.style.zIndex = 1;
+            v_pig.onclick = function () {
+                location.href = "아기돼지삼형제.html";
+            }
+        }
+        v_pig.onmouseout = function () {
+            v_pig.style.opacity = "1";
+            v_pigtxt.style.zIndex = 0;
+        }
+
+        v_redhat.onmouseenter = function () {
+            v_redhat.style.opacity = "0.5";
+            v_redhat.onclick = function () {
+                location.href = "빨간모자.html";
+            }
+        }
+        v_redhat.onmouseout = function () {
+            v_redhat.style.opacity = "1";
+        }
+
+        v_lala.onmouseenter = function () {
+            v_lala.style.opacity = "0.5";
+            v_lala.onclick = function () {
+                location.href = "라푼젤.html";
+            }
+        }
+        v_lala.onmouseout = function () {
+            v_lala.style.opacity = "1";
+        }
+
+        v_goose.onmouseenter = function () {
+            v_goose.style.opacity = "0.5";
+            v_goose.onclick = function () {
+                location.href = "황금알을낳는거위.html";
+            }
+        }
+        v_goose.onmouseout = function () {
+            v_goose.style.opacity = "1";
+        }
+
+        
+
+
+    </script>
+
+</body>
+
+</html>
